@@ -1,6 +1,6 @@
 import { rgba, lighten } from 'polished';
 
-// Gruvbox Dark palette ufficiale
+// Official Gruvbox Dark palette
 export const palette = {
   primary: {
     SOLID: '#d79921', // yellow
@@ -95,7 +95,7 @@ const gruvboxDarkTheme = {
   brand: palette.primary.SOLID,
   text: palette.text.BASE,
   textLink: palette.hues.BLUE_BRIGHT,
-  draftColor: '#d79921',
+  draftColor: palette.primary.SOLID,
   bg: palette.background.BASE,
 
   primary: {
@@ -248,7 +248,7 @@ const gruvboxDarkTheme = {
   },
 
   workspace: {
-    accent: '#d79921',
+    accent: palette.primary.SOLID,
     border: palette.border.BORDER2,
     button: {
       bg: palette.background.SURFACE0
@@ -345,7 +345,7 @@ const gruvboxDarkTheme = {
       color: palette.text.SUBTEXT2,
       bg: 'transparent',
       border: 'transparent',
-      hoverBorder: ''
+      hoverBorder: 'transparent'
     },
     disabled: {
       color: palette.text.SUBTEXT0,

@@ -1,6 +1,6 @@
 import { rgba, darken } from 'polished';
 
-// Gruvbox Light palette ufficiale
+// Official Gruvbox Light palette
 export const palette = {
   primary: {
     SOLID: '#d79921', // yellow
@@ -32,7 +32,7 @@ export const palette = {
   },
   background: {
     BASE: '#fbf1c7', // bg0
-    MANTLE: '#f9f5d7', // bg0_s (soft contrast)
+    MANTLE: '#fbf1c7', // bg0_s (soft contrast)
     CRUST: '#f2e5bc', // bg0_h (hard contrast)
     SURFACE0: '#ebdbb2', // bg1
     SURFACE1: '#d5c4a1', // bg2
@@ -95,7 +95,7 @@ const gruvboxLightTheme = {
   brand: palette.primary.SOLID,
   text: palette.text.BASE,
   textLink: palette.hues.BLUE_BRIGHT,
-  draftColor: '#d79921',
+  draftColor: palette.primary.SOLID,
   bg: palette.background.BASE,
 
   primary: {
@@ -197,9 +197,9 @@ const gruvboxLightTheme = {
   },
 
   input: {
-    bg: palette.background.MANTLE,
+    bg: 'transparent',
     border: palette.border.BORDER2,
-    focusBorder: rgba(palette.primary.SOLID, 0.6),
+    focusBorder: rgba(palette.primary.SOLID, 0.8),
     placeholder: {
       color: palette.text.SUBTEXT1,
       opacity: 0.7
@@ -248,7 +248,7 @@ const gruvboxLightTheme = {
   },
 
   workspace: {
-    accent: '#d79921',
+    accent: palette.primary.SOLID,
     border: palette.border.BORDER2,
     button: {
       bg: palette.background.SURFACE0
@@ -273,7 +273,7 @@ const gruvboxLightTheme = {
 
   requestTabPanel: {
     url: {
-      bg: palette.background.MANTLE,
+      bg: palette.background.BASE,
       icon: palette.text.SUBTEXT2,
       iconDanger: palette.hues.RED_BRIGHT,
       border: `solid 1px ${palette.border.BORDER1}`
@@ -286,7 +286,7 @@ const gruvboxLightTheme = {
     responseOk: palette.hues.GREEN_BRIGHT,
     responseError: palette.hues.RED_BRIGHT,
     responsePending: palette.hues.BLUE_BRIGHT,
-    responseOverlayBg: rgba(palette.background.BASE, 0.9),
+    responseOverlayBg: rgba(palette.background.BASE, 0.8),
 
     card: {
       bg: palette.background.SURFACE0,
@@ -325,9 +325,9 @@ const gruvboxLightTheme = {
       bg: palette.background.MANTLE
     },
     input: {
-      bg: palette.background.BASE,
+      bg: 'transparent',
       border: palette.border.BORDER2,
-      focusBorder: rgba(palette.primary.SOLID, 0.6)
+      focusBorder: rgba(palette.primary.SOLID, 0.8)
     },
     backdrop: {
       opacity: 0.3
@@ -345,7 +345,7 @@ const gruvboxLightTheme = {
       color: palette.text.SUBTEXT2,
       bg: 'transparent',
       border: 'transparent',
-      hoverBorder: ''
+      hoverBorder: 'transparent'
     },
     disabled: {
       color: palette.text.SUBTEXT0,
